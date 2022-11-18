@@ -1,0 +1,183 @@
+body {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: IBM Plex Mono;
+    font-size: 20px;
+    text-shadow: 0px 0px 2px black;
+}
+
+.headerMain {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(/IMAGES/HeaderSubmarine.jpg);
+    background-size: cover;
+    background-position: left 25% top 30%;
+    
+}
+    .headerDiv {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 20px;
+    }
+        #titleDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        #gameStartClear {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+            .button {
+                background-color: rgb(197, 197, 197);
+                border: 1px solid white;
+                border-radius: 5px;
+                box-shadow: 1px 3px 5px black;
+                color: white;
+                font-family: IBM Plex Mono;
+                font-size: 30px;
+                text-shadow: 0px 0px 2px black;
+                text-align: center;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+                .button:hover {
+                    cursor: pointer;
+                    background-color: rgb(172, 172, 172);
+                }
+                .button:active {
+                    box-shadow: none;
+                    color: red;
+                    background-color: rgb(130, 130, 130);
+                    border: 1px solid red;
+                    text-shadow: none;
+                }
+
+.gameBoardContainer {
+    background-image: url(/IMAGES/submarinesArtImage.jpg);
+    background-size: cover;
+    border: 1px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    opacity: 1;
+    transition: opacity 1s;   
+}
+    .gameBoardDivBox {
+        /*border: 1px dotted white;*/
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+        .playerBox {
+            
+            text-align: center;
+            text-shadow: 0px 1px 2px rgb(0, 53, 55);
+            font-size: 30px;
+            border: 2px solid white;
+            border-radius: 3px;
+            margin: 5px;
+        }
+            #player1Box {
+                background-color: none;
+                z-index: 1;
+            }
+                #player1GridBox {
+                    box-shadow: none;
+                    transition: opacity .7s;
+                }
+            #player2Box {
+                background-color: none;
+                z-index: 1;
+            }
+                #player2GridBox {
+                    box-shadow: none;
+                    transition: opacity .7s;
+                }
+        .gameBoardGridBox {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            align-items: center;
+            text-align: center;
+            
+        }    
+            
+            .gridDiv {
+                background-color: rgb(255, 255, 255, .30);
+                border: 2px solid white;
+                font-size: 30px;
+                text-shadow: 0px 1px 2px rgb(0, 53, 55);
+                padding: 5px;
+                margin: 1px;
+            }
+    .statsContainer {
+        margin: 3px;
+        display: flex;
+        flex-direction: column;
+    }
+        .statsDiv {
+            background-color: rgb(255, 255, 255, .30);
+            border: 2px solid white;
+            border-radius: 3px;
+            margin: 3px;
+            padding: 3px;
+            visibility: visible;
+        }
+            #startButtonDiv {
+                visibility: hidden;
+                z-index: 1;
+            }
+                #start {
+                    width: 50px;
+                }
+        
+
+
+
+
+@media (max-width: 1200px) {
+    .headerMain {
+        flex-direction: column;
+        background-size: cover;
+        background-position: left 25%;
+    }
+    .headerDiv {
+        padding: 3px;
+        margin: 3px;
+    }
+    .gameBoardContainer {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .statsContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .statsDiv {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .gridDiv {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BShip.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Chapter 8: Battleship Game</title>
+</head>
+<body>
+    
+    <div class="headerMain" id="headerMain">
+        
+        <div class="headerDiv" id="titleDiv"><i>IN DEEP TROUBLE!</i></div>
+        
+        <div class="headerDiv" id="gameStartClearDiv">
+            <button class="button" id="newGame" onclick="newGame()">New Game</button>
+        </div>
+    
+    </div>
+
+    <div class="gameBoardContainer" id="gameBoardContainer">
+        
+        <div class="gameBoardDivBox" id="gameBoard1DivBox">
+            <div class="playerBox" id="player1Box">Player 1's Turn</div>
+            <div class="gameBoardGridBox" id="player1GridBox">
+                <div class="gridDiv" id="gridDivP11" onclick="p2Fires(event)">1</div>
+                <div class="gridDiv" id="gridDivP12" onclick="p2Fires(event)">2</div>
+                <div class="gridDiv" id="gridDivP13" onclick="p2Fires(event)">3</div>
+                <div class="gridDiv" id="gridDivP14" onclick="p2Fires(event)">4</div>
+                <div class="gridDiv" id="gridDivP15" onclick="p2Fires(event)">5</div>
+                <div class="gridDiv" id="gridDivP16" onclick="p2Fires(event)">6</div>
+                <div class="gridDiv" id="gridDivP17" onclick="p2Fires(event)">7</div>
+                <div class="gridDiv" id="gridDivP18" onclick="p2Fires(event)">8</div>
+                <div class="gridDiv" id="gridDivP19" onclick="p2Fires(event)">9</div>
+                <div class="gridDiv" id="gridDivP110" onclick="p2Fires(event)">10</div>
+                <div class="gridDiv" id="gridDivP111" onclick="p2Fires(event)">11</div>
+                <div class="gridDiv" id="gridDivP112" onclick="p2Fires(event)">12</div>
+                <div class="gridDiv" id="gridDivP113" onclick="p2Fires(event)">13</div>
+                <div class="gridDiv" id="gridDivP114" onclick="p2Fires(event)">14</div>
+                <div class="gridDiv" id="gridDivP115" onclick="p2Fires(event)">15</div>
+                <div class="gridDiv" id="gridDivP116" onclick="p2Fires(event)">16</div>
+                <div class="gridDiv" id="gridDivP117" onclick="p2Fires(event)">17</div>
+                <div class="gridDiv" id="gridDivP118" onclick="p2Fires(event)">18</div>
+                <div class="gridDiv" id="gridDivP119" onclick="p2Fires(event)">19</div>
+                <div class="gridDiv" id="gridDivP120" onclick="p2Fires(event)">20</div>
+                <div class="gridDiv" id="gridDivP121" onclick="p2Fires(event)">21</div>
+                <div class="gridDiv" id="gridDivP122" onclick="p2Fires(event)">22</div>
+                <div class="gridDiv" id="gridDivP123" onclick="p2Fires(event)">23</div>
+                <div class="gridDiv" id="gridDivP124" onclick="p2Fires(event)">24</div>
+                <div class="gridDiv" id="gridDivP125" onclick="p2Fires(event)">25</div>
+                <div class="gridDiv" id="gridDivP126" onclick="p2Fires(event)">26</div>
+                <div class="gridDiv" id="gridDivP127" onclick="p2Fires(event)">27</div>
+                <div class="gridDiv" id="gridDivP128" onclick="p2Fires(event)">28</div>
+                <div class="gridDiv" id="gridDivP129" onclick="p2Fires(event)">29</div>
+                <div class="gridDiv" id="gridDivP130" onclick="p2Fires(event)">30</div>
+                <div class="gridDiv" id="gridDivP131" onclick="p2Fires(event)">31</div>
+                <div class="gridDiv" id="gridDivP132" onclick="p2Fires(event)">32</div>
+                <div class="gridDiv" id="gridDivP133" onclick="p2Fires(event)">33</div>
+                <div class="gridDiv" id="gridDivP134" onclick="p2Fires(event)">34</div>
+                <div class="gridDiv" id="gridDivP135" onclick="p2Fires(event)">35</div>
+                <div class="gridDiv" id="gridDivP136" onclick="p2Fires(event)">36</div>
+                <div class="gridDiv" id="gridDivP137" onclick="p2Fires(event)">37</div>
+                <div class="gridDiv" id="gridDivP138" onclick="p2Fires(event)">38</div>
+                <div class="gridDiv" id="gridDivP139" onclick="p2Fires(event)">39</div>
+                <div class="gridDiv" id="gridDivP140" onclick="p2Fires(event)">40</div>
+                <div class="gridDiv" id="gridDivP141" onclick="p2Fires(event)">41</div>
+                <div class="gridDiv" id="gridDivP142" onclick="p2Fires(event)">42</div>
+                <div class="gridDiv" id="gridDivP143" onclick="p2Fires(event)">43</div>
+                <div class="gridDiv" id="gridDivP144" onclick="p2Fires(event)">44</div>
+                <div class="gridDiv" id="gridDivP145" onclick="p2Fires(event)">45</div>
+                <div class="gridDiv" id="gridDivP146" onclick="p2Fires(event)">46</div>
+                <div class="gridDiv" id="gridDivP147" onclick="p2Fires(event)">47</div>
+                <div class="gridDiv" id="gridDivP148" onclick="p2Fires(event)">48</div>
+                <div class="gridDiv" id="gridDivP149" onclick="p2Fires(event)">49</div>
+                <div class="gridDiv" id="gridDivP150" onclick="p2Fires(event)">50</div>
+                <div class="gridDiv" id="gridDivP151" onclick="p2Fires(event)">51</div>
+                <div class="gridDiv" id="gridDivP152" onclick="p2Fires(event)">52</div>
+                <div class="gridDiv" id="gridDivP153" onclick="p2Fires(event)">53</div>
+                <div class="gridDiv" id="gridDivP154" onclick="p2Fires(event)">54</div>
+                <div class="gridDiv" id="gridDivP155" onclick="p2Fires(event)">55</div>
+                <div class="gridDiv" id="gridDivP156" onclick="p2Fires(event)">56</div>
+                <div class="gridDiv" id="gridDivP157" onclick="p2Fires(event)">57</div>
+                <div class="gridDiv" id="gridDivP158" onclick="p2Fires(event)">58</div>
+                <div class="gridDiv" id="gridDivP159" onclick="p2Fires(event)">59</div>
+                <div class="gridDiv" id="gridDivP160" onclick="p2Fires(event)">60</div>
+                <div class="gridDiv" id="gridDivP161" onclick="p2Fires(event)">61</div>
+                <div class="gridDiv" id="gridDivP162" onclick="p2Fires(event)">62</div>
+                <div class="gridDiv" id="gridDivP163" onclick="p2Fires(event)">63</div>
+                <div class="gridDiv" id="gridDivP164" onclick="p2Fires(event)">64</div>
+                <div class="gridDiv" id="gridDivP165" onclick="p2Fires(event)">65</div>
+                <div class="gridDiv" id="gridDivP166" onclick="p2Fires(event)">66</div>
+                <div class="gridDiv" id="gridDivP167" onclick="p2Fires(event)">67</div>
+                <div class="gridDiv" id="gridDivP168" onclick="p2Fires(event)">68</div>
+                <div class="gridDiv" id="gridDivP169" onclick="p2Fires(event)">69</div>
+                <div class="gridDiv" id="gridDivP170" onclick="p2Fires(event)">70</div>
+                <div class="gridDiv" id="gridDivP171" onclick="p2Fires(event)">71</div>
+                <div class="gridDiv" id="gridDivP172" onclick="p2Fires(event)">72</div>
+                <div class="gridDiv" id="gridDivP173" onclick="p2Fires(event)">73</div>
+                <div class="gridDiv" id="gridDivP174" onclick="p2Fires(event)">74</div>
+                <div class="gridDiv" id="gridDivP175" onclick="p2Fires(event)">75</div>
+                <div class="gridDiv" id="gridDivP176" onclick="p2Fires(event)">76</div>
+                <div class="gridDiv" id="gridDivP177" onclick="p2Fires(event)">77</div>
+                <div class="gridDiv" id="gridDivP178" onclick="p2Fires(event)">78</div>
+                <div class="gridDiv" id="gridDivP179" onclick="p2Fires(event)">79</div>
+                <div class="gridDiv" id="gridDivP180" onclick="p2Fires(event)">80</div>
+                <div class="gridDiv" id="gridDivP181" onclick="p2Fires(event)">81</div>
+            </div>
+            
+        </div>
+
+        <div class="statsContainer" id="statsContainer">
+            <div class="statsDiv" id="player1StatsDiv">PLAYER1<hr>
+                <div class="stats" id="shotsP1">SHOTS:<span id="shotsSpanP1">0</span></div>
+                <div class="stats" id="hitsP1">HITS:<span id="hitsSpanP1">0</span></div>
+                <div class="stats" id="shipsSunkP1">SHIPS SUNK:<span id="shipsSunkSpanP1">0</span>/3</div>
+                <div class="stats" id="hitPercentageP1">HIT%:<span id="hitPercentageSpanP1">0</span>%</div>
+            </div>
+            <div class="statsDivButton" id="startButtonDiv">
+                <button class="button" id="start" onclick="startPlay()">Start</button>
+            </div>
+            <div class="statsDiv" id="player2StatsDiv">PLAYER2<hr>
+                <div class="stats" id="shotsP2">SHOTS:<span id="shotsSpanP2">0</span></div>
+                <div class="stats" id="hitsP2">HITS:<span id="hitsSpanP2">0</span></div>
+                <div class="stats" id="shipsSunkP2">SHIPS SUNK:<span id="shipsSunkSpanP2">0</span>/3</div>
+                <div class="stats" id="hitPercentageP2">HIT%:<span id="hitPercentageSpanP2">0</span>%</div>
+            </div>
+        </div>
+
+        <div class="gameBoardDivBox" id="gameBoard2DivBox">
+            <div class="playerBox" id="player2Box">Player 2's Turn</div>
+            <div class="gameBoardGridBox" id="player2GridBox">
+                <div class="gridDiv" id="gridDivP21" onclick="p1Fires(event)">1</div>
+                <div class="gridDiv" id="gridDivP22" onclick="p1Fires(event)">2</div>
+                <div class="gridDiv" id="gridDivP23" onclick="p1Fires(event)">3</div>
+                <div class="gridDiv" id="gridDivP24" onclick="p1Fires(event)">4</div>
+                <div class="gridDiv" id="gridDivP25" onclick="p1Fires(event)">5</div>
+                <div class="gridDiv" id="gridDivP26" onclick="p1Fires(event)">6</div>
+                <div class="gridDiv" id="gridDivP27" onclick="p1Fires(event)">7</div>
+                <div class="gridDiv" id="gridDivP28" onclick="p1Fires(event)">8</div>
+                <div class="gridDiv" id="gridDivP29" onclick="p1Fires(event)">9</div>
+                <div class="gridDiv" id="gridDivP210" onclick="p1Fires(event)">10</div>
+                <div class="gridDiv" id="gridDivP211" onclick="p1Fires(event)">11</div>
+                <div class="gridDiv" id="gridDivP212" onclick="p1Fires(event)">12</div>
+                <div class="gridDiv" id="gridDivP213" onclick="p1Fires(event)">13</div>
+                <div class="gridDiv" id="gridDivP214" onclick="p1Fires(event)">14</div>
+                <div class="gridDiv" id="gridDivP215" onclick="p1Fires(event)">15</div>
+                <div class="gridDiv" id="gridDivP216" onclick="p1Fires(event)">16</div>
+                <div class="gridDiv" id="gridDivP217" onclick="p1Fires(event)">17</div>
+                <div class="gridDiv" id="gridDivP218" onclick="p1Fires(event)">18</div>
+                <div class="gridDiv" id="gridDivP219" onclick="p1Fires(event)">19</div>
+                <div class="gridDiv" id="gridDivP220" onclick="p1Fires(event)">20</div>
+                <div class="gridDiv" id="gridDivP221" onclick="p1Fires(event)">21</div>
+                <div class="gridDiv" id="gridDivP222" onclick="p1Fires(event)">22</div>
+                <div class="gridDiv" id="gridDivP223" onclick="p1Fires(event)">23</div>
+                <div class="gridDiv" id="gridDivP224" onclick="p1Fires(event)">24</div>
+                <div class="gridDiv" id="gridDivP225" onclick="p1Fires(event)">25</div>
+                <div class="gridDiv" id="gridDivP226" onclick="p1Fires(event)">26</div>
+                <div class="gridDiv" id="gridDivP227" onclick="p1Fires(event)">27</div>
+                <div class="gridDiv" id="gridDivP228" onclick="p1Fires(event)">28</div>
+                <div class="gridDiv" id="gridDivP229" onclick="p1Fires(event)">29</div>
+                <div class="gridDiv" id="gridDivP230" onclick="p1Fires(event)">30</div>
+                <div class="gridDiv" id="gridDivP231" onclick="p1Fires(event)">31</div>
+                <div class="gridDiv" id="gridDivP232" onclick="p1Fires(event)">32</div>
+                <div class="gridDiv" id="gridDivP233" onclick="p1Fires(event)">33</div>
+                <div class="gridDiv" id="gridDivP234" onclick="p1Fires(event)">34</div>
+                <div class="gridDiv" id="gridDivP235" onclick="p1Fires(event)">35</div>
+                <div class="gridDiv" id="gridDivP236" onclick="p1Fires(event)">36</div>
+                <div class="gridDiv" id="gridDivP237" onclick="p1Fires(event)">37</div>
+                <div class="gridDiv" id="gridDivP238" onclick="p1Fires(event)">38</div>
+                <div class="gridDiv" id="gridDivP239" onclick="p1Fires(event)">39</div>
+                <div class="gridDiv" id="gridDivP240" onclick="p1Fires(event)">40</div>
+                <div class="gridDiv" id="gridDivP241" onclick="p1Fires(event)">41</div>
+                <div class="gridDiv" id="gridDivP242" onclick="p1Fires(event)">42</div>
+                <div class="gridDiv" id="gridDivP243" onclick="p1Fires(event)">43</div>
+                <div class="gridDiv" id="gridDivP244" onclick="p1Fires(event)">44</div>
+                <div class="gridDiv" id="gridDivP245" onclick="p1Fires(event)">45</div>
+                <div class="gridDiv" id="gridDivP246" onclick="p1Fires(event)">46</div>
+                <div class="gridDiv" id="gridDivP247" onclick="p1Fires(event)">47</div>
+                <div class="gridDiv" id="gridDivP248" onclick="p1Fires(event)">48</div>
+                <div class="gridDiv" id="gridDivP249" onclick="p1Fires(event)">49</div>
+                <div class="gridDiv" id="gridDivP250" onclick="p1Fires(event)">50</div>
+                <div class="gridDiv" id="gridDivP251" onclick="p1Fires(event)">51</div>
+                <div class="gridDiv" id="gridDivP252" onclick="p1Fires(event)">52</div>
+                <div class="gridDiv" id="gridDivP253" onclick="p1Fires(event)">53</div>
+                <div class="gridDiv" id="gridDivP254" onclick="p1Fires(event)">54</div>
+                <div class="gridDiv" id="gridDivP255" onclick="p1Fires(event)">55</div>
+                <div class="gridDiv" id="gridDivP256" onclick="p1Fires(event)">56</div>
+                <div class="gridDiv" id="gridDivP257" onclick="p1Fires(event)">57</div>
+                <div class="gridDiv" id="gridDivP258" onclick="p1Fires(event)">58</div>
+                <div class="gridDiv" id="gridDivP259" onclick="p1Fires(event)">59</div>
+                <div class="gridDiv" id="gridDivP260" onclick="p1Fires(event)">60</div>
+                <div class="gridDiv" id="gridDivP261" onclick="p1Fires(event)">61</div>
+                <div class="gridDiv" id="gridDivP262" onclick="p1Fires(event)">62</div>
+                <div class="gridDiv" id="gridDivP263" onclick="p1Fires(event)">63</div>
+                <div class="gridDiv" id="gridDivP264" onclick="p1Fires(event)">64</div>
+                <div class="gridDiv" id="gridDivP265" onclick="p1Fires(event)">65</div>
+                <div class="gridDiv" id="gridDivP266" onclick="p1Fires(event)">66</div>
+                <div class="gridDiv" id="gridDivP267" onclick="p1Fires(event)">67</div>
+                <div class="gridDiv" id="gridDivP268" onclick="p1Fires(event)">68</div>
+                <div class="gridDiv" id="gridDivP269" onclick="p1Fires(event)">69</div>
+                <div class="gridDiv" id="gridDivP270" onclick="p1Fires(event)">70</div>
+                <div class="gridDiv" id="gridDivP271" onclick="p1Fires(event)">71</div>
+                <div class="gridDiv" id="gridDivP272" onclick="p1Fires(event)">72</div>
+                <div class="gridDiv" id="gridDivP273" onclick="p1Fires(event)">73</div>
+                <div class="gridDiv" id="gridDivP274" onclick="p1Fires(event)">74</div>
+                <div class="gridDiv" id="gridDivP275" onclick="p1Fires(event)">75</div>
+                <div class="gridDiv" id="gridDivP276" onclick="p1Fires(event)">76</div>
+                <div class="gridDiv" id="gridDivP277" onclick="p1Fires(event)">77</div>
+                <div class="gridDiv" id="gridDivP278" onclick="p1Fires(event)">78</div>
+                <div class="gridDiv" id="gridDivP279" onclick="p1Fires(event)">79</div>
+                <div class="gridDiv" id="gridDivP280" onclick="p1Fires(event)">80</div>
+                <div class="gridDiv" id="gridDivP281" onclick="p1Fires(event)">81</div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+<script src="/BShip.js"></script>
+    
+</body>
+</html>
